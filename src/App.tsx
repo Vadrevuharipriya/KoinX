@@ -64,9 +64,9 @@ export default function App() {
   );
 
   const afterHarvesting = useMemo(
-    () => (capitalGains ? calculateAfterHarvesting(capitalGains, selectedHoldings) : null),
-    [capitalGains, selectedHoldings]
-  );
+  () => calculateAfterHarvesting(capitalGains!, selectedHoldings),
+  [capitalGains, selectedHoldings]
+);
 
   const preRealised = useMemo(() => (capitalGains ? netRealised(capitalGains) : 0), [capitalGains]);
   const afterRealised = useMemo(
