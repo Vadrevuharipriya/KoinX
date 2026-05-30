@@ -63,10 +63,14 @@ export default function App() {
     [selectedRows, holdings]
   );
 
-  const afterHarvesting = useMemo(
-  () => calculateAfterHarvesting(capitalGains!, selectedHoldings),
-  [capitalGains, selectedHoldings]
-);
+  const afterHarvesting = useMemo(() => {
+  if (!capitalGains) return null;
+
+  return calculateAfterHarvesting(
+    capitalGains,
+    selectedHoldings
+  );
+}, [capitalGains, selectedHoldings]);
 
   const preRealised = useMemo(() => (capitalGains ? netRealised(capitalGains) : 0), [capitalGains]);
   const afterRealised = useMemo(
@@ -295,7 +299,7 @@ export default function App() {
           <HarvestCard title="Pre Harvesting" gains={capitalGains} />
           <HarvestCard
             title="After Harvesting"
-            gains={afterHarvesting}
+            gains={afterHarvesting ?? capitalGains}
             isAfterHarvest = {true}
             showSavings={savings > 0}
             savingsAmount={savings}
