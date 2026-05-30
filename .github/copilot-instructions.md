@@ -1,0 +1,4 @@
+- [ ] Project scaffolded for a React + TypeScript tax harvesting interface.
+- [ ] Ensure the app includes mock API calls, responsive layout, and real-time selection logic.
+- [ ] Keep the implementation simple and maintainable with reusable components.
+- [ ] Do not add external dependencies beyond React, TypeScript, and Vite.

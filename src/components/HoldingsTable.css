@@ -1,0 +1,332 @@
+.tableSection {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0px 2px 16px rgba(25, 40, 57, 0.07);
+}
+
+.tableHeader {
+  margin: 0 0 20px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #111827;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px;
+}
+
+/* Header */
+.th {
+  background: #f3f6fb;
+  padding: 18px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  border: none;
+  vertical-align: middle;
+}
+
+.th:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.thCheckbox {
+  width: 56px;
+  text-align: center;
+}
+
+.thAsset {
+  text-align: left;
+}
+
+.thRight {
+  text-align: right;
+}
+
+.thHoldings {
+  text-align: right;
+}
+
+.holdingsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.holdingsTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.thSubLabel {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+}
+
+/* Column widths */
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  width: 260px;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+  width: 220px;
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 180px;
+}
+
+.table th:nth-child(5),
+.table td:nth-child(5) {
+  width: 180px;
+}
+
+.table th:nth-child(6),
+.table td:nth-child(6) {
+  width: 180px;
+}
+
+.table th:nth-child(7),
+.table td:nth-child(7) {
+  width: 180px;
+}
+
+/* Rows */
+.td {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+.tdRight {
+  text-align: right;
+}
+
+.selectedRow {
+  background: #eef4ff;
+}
+
+/* Checkbox */
+.checkboxWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkboxInput {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+}
+
+.checkboxBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkboxChecked {
+  border: 1px solid #1557e7;
+  background: #1557e7;
+}
+
+.checkboxUnchecked {
+  border: 1.5px solid #cbd5e1;
+  background: #fff;
+}
+
+.checkboxIndeterminate {
+  width: 8px;
+  height: 2px;
+  background: #94a3b8;
+}
+
+/* Asset */
+.assetCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coinIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.coinName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.coinSubtitle {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Values */
+.holdingsValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.holdingsRate {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.gainValue {
+  text-align: right;
+}
+
+.gainPositive {
+  color: #00a86b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.gainNegative {
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.gainBalance {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.amountSell {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.amountSellSelected {
+  color: #111827;
+}
+
+.amountSellPlaceholder {
+  color: #64748b;
+}
+
+/* View all */
+.viewAllBtn {
+  margin-top: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #1557e7;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.sortableLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sortIcon {
+  font-size: 15px;
+  line-height: 1;
+  color: #64748b;
+  font-weight: 600;
+}
+/* ================= MOBILE ================= */
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .tableSection {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .tableHeader {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .table {
+    min-width: 1200px;
+  }
+
+  .th {
+    padding: 14px 12px;
+    font-size: 13px;
+  }
+
+  .td {
+    padding: 14px 12px;
+  }
+
+  .coinIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .coinName {
+    font-size: 12px;
+  }
+
+  .coinSubtitle {
+    font-size: 11px;
+  }
+
+  .holdingsValue,
+  .gainPositive,
+  .gainNegative,
+  .amountSell {
+    font-size: 12px;
+  }
+
+  .holdingsRate,
+  .gainBalance {
+    font-size: 11px;
+  }
+
+  .viewAllBtn {
+    margin-top: 12px;
+  }
+}
