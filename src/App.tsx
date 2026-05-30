@@ -151,7 +151,11 @@ export default function App() {
       >
         
         <div style={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <img src="assets/logo.png" alt="KoinX Logo" style={{ width: 96, height: 24 }} />
+          <img
+            src="/logo.png"
+            alt="KoinX Logo"
+            style={{ width: 96, height: 24 }}
+          />
         </div>
       </nav>
 
